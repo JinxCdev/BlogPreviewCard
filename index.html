@@ -24,8 +24,22 @@
       </div>
 
       <div class="card__footer">
-        <img class="card__img__footer" src="assets/images/image-avatar.jpg" alt="autor image">
-        
+        <picture>
+          <source
+            sizes="32w" 
+            srcset="assets/images/image-avatar.avif 32w" 
+            type="image/avif">
+          <source
+            sizes="32w" 
+            srcset="assets/images/image-avatar.webp 32w" 
+            type="image/webp">
+          <source
+            sizes="32w" 
+            srcset="assets/images/image-avatar.jpeg 32w" 
+            type="image/jpeg">
+          <img class="card__img__footer" loading="lazy" decoding="async" src="assets/images/image-avatar.jpg" lazyalt="imagen" width="32" height="32">
+        </picture>
+
         <p class="card__footer__text">Greg Hooper</p>
       </div>
     </div>
